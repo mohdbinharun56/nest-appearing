@@ -12,7 +12,7 @@ export class CatsService{
         return createCatDTO;
 
     }
-    findAllCats():string{
-        return 'Fetch all cats';
+    findAllCats():string[]{
+        return ['picaso','miniso','shipu'];
     }
 }
