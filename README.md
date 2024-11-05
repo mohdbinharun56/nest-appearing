@@ -29,7 +29,8 @@
 ## Project setup
 
 ```bash
-$ npm install
+$ npm install @nestjs/cli
+$ nest new project-name
 ```
 
 ## Compile and run the project
