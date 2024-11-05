@@ -19,7 +19,7 @@ export class AppController {
 
   // Route Parameter
   @Get(':id')
-   findUserWithId(@Param() id:number):number{
+   findUserWithId(@Param('id') id:any):number{
     console.log(id);
     return  this.appService.findUserWithId(id);
   }
