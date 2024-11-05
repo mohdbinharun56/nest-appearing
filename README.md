@@ -34,7 +34,7 @@ Async is a keyword that represent the asynchronous programming method. Asynchron
 Await keyword wait to execute a task until complete the another task.
 
 ##### Promise
-Promise is an object that represent the result of the asynchronous method.
+Promise is an object that represent the result of the asynchronous method. Promise is adopt return type object.
 
 ```bash
 async getAsync():Promise<number>{
