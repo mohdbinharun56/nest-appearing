@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { ConsoleLogger, Controller, Get, Param } from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller('user')
@@ -14,7 +14,14 @@ export class AppController {
   // Async Await and Promise
   @Get('async')
   async getAsync():Promise<number>{
-    return this.appService.getAsync();
+    return await this.appService.getAsync();
+  }
+
+  // Route Parameter
+  @Get(':id')
+   findUserWithId(@Param() id:number):number{
+    console.log(id);
+    return  this.appService.findUserWithId(id);
   }
 }
 

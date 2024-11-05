@@ -16,4 +16,8 @@ export class AppService {
   async add(a:number,b:number):Promise<number>{
     return a+b;
   }
+
+  findUserWithId(id:number):number{
+    return id;
+  }
 }
