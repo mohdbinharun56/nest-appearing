@@ -28,7 +28,7 @@
 
 #### Async, Awiat and Promise
 ##### Async
-Async is a keyword that represent the asynchronous programming method. Asynchronous programming implement a task that does not need to be execute sequentially. It can be independently progrm can execute. 
+Async is a keyword that represent the asynchronous programming method. Asynchronous programming implement a task that does not need to be execute sequentially. It can be independently progrm can execute. Async can be used await.
 
 ##### Await 
 Await keyword wait to execute a task until complete the another task.
