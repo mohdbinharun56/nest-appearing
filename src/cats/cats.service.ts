@@ -25,7 +25,7 @@ export class CatsService{
     //     return ['picaso','miniso','shipu'];
     // }
 
-    findAllCats():Cat[]{
+    async findAllCats(): Promise<Cat[]>{
         return this.cats;
     }
 }
