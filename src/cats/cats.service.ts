@@ -1,18 +1,31 @@
 import { Injectable } from "@nestjs/common";
-import { CreatCatDTO } from "./cats.createCatDTO";
+// import { CreatCatDTO } from "./cats.createCatDTO";
+import { Cat } from "src/interfaces/cat.interface";
 
 @Injectable()
 export class CatsService{
-    createCat(createCatDTO:CreatCatDTO):object{
-        createCatDTO = {
-            name: "picaso",
-            age: 20,
-            breed: "fish"
-        }
-        return createCatDTO;
+   private readonly cats: Cat[] =[];
 
+    // createCat(createCatDTO:CreatCatDTO):object{
+    //     createCatDTO = {
+    //         name: "picaso",
+    //         age: 20,
+    //         breed: "fish"
+    //     }
+    //     return createCatDTO;
+
+    // }
+
+    createCat(cat:Cat){
+        this.cats.push(cat);
+        // return cats[];
     }
-    findAllCats():string[]{
-        return ['picaso','miniso','shipu'];
+    
+    // findAllCats():string[]{
+    //     return ['picaso','miniso','shipu'];
+    // }
+
+    findAllCats():Cat[]{
+        return this.cats;
     }
 }

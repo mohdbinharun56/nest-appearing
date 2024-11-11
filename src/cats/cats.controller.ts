@@ -2,6 +2,7 @@ import { Body, Controller,Get, HttpStatus, Post, Res } from "@nestjs/common";
 import { CatsService } from "./cats.service";
 import { CreatCatDTO } from "./cats.createCatDTO";
 import { Response } from "express";
+import { Cat } from "src/interfaces/cat.interface";
 
 @Controller('cats')
 
@@ -9,7 +10,7 @@ export class CatsController{
     constructor(private readonly catsService: CatsService){}
 
     @Post('addCat')
-    createCats(@Body() createCatDTO: CreatCatDTO):object{
+    createCats(@Body() createCatDTO: CreatCatDTO){
         return this.catsService.createCat(createCatDTO);
     }
 
@@ -18,7 +19,7 @@ export class CatsController{
         res.status(HttpStatus.CREATED).send();
     }
     @Get()
-    findAllCats():string[]{
+    findAllCats():Cat[]{
         return this.catsService.findAllCats();
     }
 
