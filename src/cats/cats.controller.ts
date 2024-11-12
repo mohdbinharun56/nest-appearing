@@ -19,7 +19,7 @@ export class CatsController{
         res.status(HttpStatus.CREATED).send();
     }
     @Get()
-    findAllCats():Cat[]{
+    async findAllCats(): Promise<Cat[]>{
         return this.catsService.findAllCats();
     }
 
